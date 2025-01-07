@@ -25,4 +25,4 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/colorful-animated-calculator.git
+   git clone https://github.com/rohitkrsingh2112/effective-calculator.git
