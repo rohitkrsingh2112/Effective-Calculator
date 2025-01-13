@@ -17,3 +17,9 @@ function calculate() {
         document.getElementById('display').value = 'Error';
     }
 }
+
+// Function to handle backspace
+function backspace() {
+    let currentValue = document.getElementById('display').value;
+    document.getElementById('display').value = currentValue.slice(0, -1);
+}
