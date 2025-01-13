@@ -15,81 +15,16 @@ body {
     margin: 0;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(45deg, #f0f4f8, #d1e7ff);
-    animation: gradientAnimation 8s ease infinite;
+    background-color: #f0f4f8;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 30px;
 }
 
-/* Floating Images Effect */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.floating-images img {
-    position: absolute;
-    animation: float 6s ease-in-out infinite;
-}
-
-.floating-images img:nth-child(1) {
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.floating-images img:nth-child(2) {
-    left: 40%;
-    animation-delay: 2s;
-}
-
-.floating-images img:nth-child(3) {
-    left: 70%;
-    animation-delay: 4s;
-}
-
-/* Animated Intro Section with Colorful Text */
-.intro {
-    font-size: 20px;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    width: 300px;
-    opacity: 0;
-    animation: slideIn 2s ease-in-out forwards, textColorChange 4s infinite alternate;
-}
-
-/* Slide-in and Text Color Change Animations */
-@keyframes slideIn {
-    0% {
-        transform: translateX(-300px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes textColorChange {
-    0% {
-        color: #ff0066;
-    }
-    50% {
-        color: #33ccff;
-    }
-    100% {
-        color: #99cc33;
-    }
+/* Header */
+header {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 /* Calculator Window */
@@ -155,12 +90,31 @@ body {
 }
 
 /* Backspace Button */
-.operator:last-child {
+button:nth-child(17) {
     background-color: #ff6347;
+    color: white;
 }
 
-.operator:last-child:hover {
+button:nth-child(17):hover {
     background-color: #e04e32;
+}
+
+/* Percentage Button */
+.operator:nth-child(16) {
+    background-color: #ff6347;
+    color: white;
+}
+
+.operator:nth-child(16):hover {
+    background-color: #e04e32;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    color: #333;
 }
 
 /* Mobile Responsiveness */
@@ -170,19 +124,17 @@ body {
         align-items: center;
     }
 
-    .intro {
-        width: 90%; /* Make intro box responsive */
-        font-size: 16px;
-        padding: 15px;
+    header {
+        font-size: 28px;
     }
 
     .calculator {
-        width: 80%; /* Make calculator smaller on mobile */
+        width: 80%;
         padding: 20px;
     }
 
     #display {
-        font-size: 28px; /* Smaller font for display on mobile */
+        font-size: 28px;
     }
 
     .btn {
@@ -197,18 +149,5 @@ body {
 
     .equal {
         grid-column: span 2;
-    }
-}
-
-/* Animation for Background Gradient */
-@keyframes gradientAnimation {
-    0% {
-        background: linear-gradient(45deg, #f0f4f8, #d1e7ff);
-    }
-    50% {
-        background: linear-gradient(45deg, #d1e7ff, #e0f7fa);
-    }
-    100% {
-        background: linear-gradient(45deg, #f0f4f8, #d1e7ff);
     }
 }
