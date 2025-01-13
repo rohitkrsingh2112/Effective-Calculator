@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rohit's Effective Calculator</title>
+  <title>Basic Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Rohit's Effective Calculator</h1>
-  </header>
+  <div class="intro">
+    <h2>Welcome to Rohit's Web Development</h2>
+    <p>Building innovative solutions for the future of technology. Internship at Unified Mentor Pvt. Ltd.</p>
+  </div>
 
   <div class="calculator">
     <input type="text" id="display" disabled>
@@ -35,14 +36,13 @@
       <button class="btn" onclick="appendToDisplay('.')">.</button>
       <button class="btn operator" onclick="appendToDisplay('/')">/</button>
 
-      <button class="btn operator" onclick="appendToDisplay('%')">%</button>
+      <button class="btn" onclick="appendToDisplay('%')">%</button>
       <button class="btn" onclick="backspace()">←</button>
       <button class="btn equal" onclick="calculate()">=</button>
     </div>
   </div>
-
   <footer>
-    <p>Building innovative solutions for the future of technology. Internship at Unified Mentor Pvt. Ltd.</p>
+    <h2>Designed by Rohit</h2>
   </footer>
 
   <script src="script.js"></script>
