@@ -1,17 +1,19 @@
 function appendToDisplay(value) {
     document.getElementById('display').value += value;
-  }
-  
-  function clearDisplay() {
+}
+
+function clearDisplay() {
     document.getElementById('display').value = '';
-  }
-  
-  function calculate() {
+}
+
+function calculate() {
     try {
-      let result = eval(document.getElementById('display').value);
-      document.getElementById('display').value = result;
+        let expression = document.getElementById('display').value;
+        // Convert percentage to a valid expression
+        expression = expression.replace(/(\d+)%/g, "($1/100)");
+        let result = eval(expression);
+        document.getElementById('display').value = result;
     } catch (error) {
-      document.getElementById('display').value = 'Error';
+        document.getElementById('display').value = 'Error';
     }
-  }
-  
+}
