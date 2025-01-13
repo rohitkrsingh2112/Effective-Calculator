@@ -17,9 +17,3 @@ function calculate() {
         document.getElementById('display').value = 'Error';
     }
 }
-
-// Function to implement backspace (delete last character)
-function backspace() {
-    let display = document.getElementById('display');
-    display.value = display.value.slice(0, -1);
-}
