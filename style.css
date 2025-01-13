@@ -17,9 +17,9 @@ body {
     overflow: hidden;
     background: linear-gradient(45deg, #f0f4f8, #d1e7ff);
     animation: gradientAnimation 8s ease infinite;
-    flex-direction: column; /* Added this to stack the elements vertically */
-    justify-content: space-evenly; /* Distribute space evenly */
-    gap: 30px; /* Added gap between intro and calculator */
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 30px;
 }
 
 /* Floating Images Effect */
@@ -161,6 +161,43 @@ body {
 
 .operator:last-child:hover {
     background-color: #e04e32;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro {
+        width: 90%; /* Make intro box responsive */
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .calculator {
+        width: 80%; /* Make calculator smaller on mobile */
+        padding: 20px;
+    }
+
+    #display {
+        font-size: 28px; /* Smaller font for display on mobile */
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    .equal {
+        grid-column: span 2;
+    }
 }
 
 /* Animation for Background Gradient */
